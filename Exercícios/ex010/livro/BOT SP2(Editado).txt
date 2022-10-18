@@ -1,0 +1,386 @@
+//ajustes iniciais
+wait 1000
+left 1441, 54
+wait 1000
+//buffs
+set #a FindImage (0 0 1600 900 (C:\Users\Benetti\Downloads\talisman\MEGAIMAGES\mount.bmp) %arr workwindow)
+if #a > 0
+send space 1000
+end_if
+send f5 1500
+send f7 1500
+send 6 1500
+//mount
+set #a FindImage (0 0 1600 900 (C:\Users\Benetti\Downloads\talisman\MEGAIMAGES\mount.bmp) %arr workwindow)
+if_not #a > 0
+send space 1000
+end_if
+//invite team
+:team
+send f 800
+wait 1500
+kright 565, 274
+wait 2500
+kright 565, 274
+wait 2500
+left 598, 320
+wait 1000
+send f 800
+wait 1500
+//entrando cave
+:entercave
+   kright 1089, 489
+   wait 1500
+      right 1089, 489
+      wait 1s
+   left 381, 380
+   wait 1s
+//conferindo team
+set #a FindImage (0 0 1600 900 (C:\Users\Benetti\Downloads\talisman\MEGAIMAGES\wizz.bmp) %arr workwindow)
+if #a > 0
+double_kright 58, 50
+wait
+double_right 58, 50
+wait 2500
+left 104, 96
+wait 500
+goto walk
+wait 2000
+end_if
+//andando na cave
+:walk
+wait 2000
+left 1486, 521
+wait 2000
+left 1467, 506
+wait 2000
+send space 1000
+send tab 800
+:ersatz
+wait 1000
+set #a FindImage (0 0 1600 900 (C:\Users\Benetti\Downloads\talisman\MEGAIMAGES\84.png) %arr workwindow)
+if #a > 0
+send f6 800
+send f1 1000
+send f2 1000
+send f3 1000
+send f2 1000
+send f3 1000
+send f2 1000
+send f6 800
+send f6 800
+send tab 800
+goto ersatz
+end_if
+wait 2s
+set #a FindImage (0 0 1600 900 (C:\Users\Benetti\Downloads\talisman\MEGAIMAGES\ersatz.bmp) %arr workwindow)
+if_not #a > 0
+repeat 3
+send f6 800
+send f8 18000
+end_repeat
+end_if
+left 1407, 475
+wait 2000
+:waitboss
+set #a FindImage (0 0 1600 900 (C:\Users\Benetti\Downloads\talisman\MEGAIMAGES\ersatzboss.bmp) %arr workwindow)
+if #a > 0
+goto ersatzboss
+end_if
+set #a FindImage (0 0 1600 900 (C:\Users\Benetti\Downloads\talisman\MEGAIMAGES\ersatzboss.bmp) %arr workwindow)
+if_not #a > 0
+wait 1000
+send f6 800
+goto waitboss
+end_if
+:ersatzboss
+wait 2500
+set #a FindImage (0 0 1600 900 (C:\Users\Benetti\Downloads\talisman\MEGAIMAGES\ersatzboss.bmp) %arr workwindow)
+if #a > 0
+repeat 3
+send f6 800
+send f6 800
+send f1 1000
+send f2 1000
+send f3 1000
+send f6 800
+send f6 800
+end_repeat
+send esc 800
+goto ersatzboss
+end_if
+//indo parte 2
+set #a FindImage (0 0 1600 900 (C:\Users\Benetti\Downloads\talisman\MEGAIMAGES\mount.bmp) %arr workwindow)
+if_not #a > 0
+send space 2000
+end_if
+left 1437, 499
+wait 2000
+left 1462, 484
+wait 2000
+left 1457, 537
+wait 2000
+left 1493, 596
+wait 2000
+set #a FindImage (0 0 1600 900 (C:\Users\Benetti\Downloads\talisman\MEGAIMAGES\mount.bmp) %arr workwindow)
+if #a > 0
+send space 1000
+end_if
+send tab 800
+:mobspart2
+set #a FindImage (0 0 1600 900 (C:\Users\Benetti\Downloads\talisman\MEGAIMAGES\84.png) %arr workwindow)
+if #a > 0
+send f6 800
+send f1 1000
+send f2 1000
+send f3 1000
+send f2 1000
+send f3 1000
+send f2 1000
+send f6 800
+send f6 800
+send tab 800
+goto mobspart2
+end_if
+wait 2s
+set #a FindImage (0 0 1600 900 (C:\Users\Benetti\Downloads\talisman\MEGAIMAGES\ersatz.bmp) %arr workwindow)
+if_not #a > 0
+repeat 1
+send f6 800
+send f8 18000
+end_repeat
+end_if
+//indo parte 3
+set #a FindImage (0 0 1600 900 (C:\Users\Benetti\Downloads\talisman\MEGAIMAGES\mount.bmp) %arr workwindow)
+if_not #a > 0
+send space 2000
+end_if
+:continue
+left 1475, 470
+wait 2000
+left 1434, 489
+wait 2000
+left 1467, 480
+wait 2000
+left 1493, 330
+wait 2000
+left 1462, 402
+wait 2000
+left 1488, 433
+wait 2000
+left 1462, 479
+wait 2000
+left 1353, 463
+wait 2000
+set #a FindImage (0 0 1600 900 (C:\Users\Benetti\Downloads\talisman\MEGAIMAGES\mount.bmp) %arr workwindow)
+if #a > 0
+send space 1000
+end_if
+send tab 800
+:mobspart3
+wait 2000
+set #a FindImage (0 0 1600 900 (C:\Users\Benetti\Downloads\talisman\MEGAIMAGES\84.png) %arr workwindow)
+if #a > 0
+send f6 800
+send f1 1000
+send f2 1000
+send f3 1000
+send f2 1000
+send f3 1000
+send f2 1000
+send f6 800
+send f6 800
+send tab 800
+goto mobspart3
+end_if
+set #a FindImage (0 0 1600 900 (C:\Users\Benetti\Downloads\talisman\MEGAIMAGES\ersatz.bmp) %arr workwindow)
+if_not #a > 0
+repeat 2
+send f6 800
+send f8 18000
+end_repeat
+end_if
+//indo parte 4
+set #a FindImage (0 0 1600 900 (C:\Users\Benetti\Downloads\talisman\MEGAIMAGES\mount.bmp) %arr workwindow)
+if_not #a > 0
+send space 1000
+end_if
+left 1166, 191
+wait 2000
+left 824, 120
+wait 2000
+left 791, 109
+wait 2000
+left 796, 112
+wait 2000
+left 813, 81
+wait 2000
+left 221, 484
+wait 2000
+set #a FindImage (0 0 1600 900 (C:\Users\Benetti\Downloads\talisman\MEGAIMAGES\mount.bmp) %arr workwindow)
+if #a > 0
+send space 1000
+end_if
+:mobspart4
+wait 2000
+set #a FindImage (0 0 1600 900 (C:\Users\Benetti\Downloads\talisman\MEGAIMAGES\84.png) %arr workwindow)
+if #a > 0
+send f6 800
+send f1 1000
+send f2 1000
+send f3 1000
+send f2 1000
+send f3 1000
+send f2 1000
+send f6 800
+send f6 800
+send tab 800
+goto mobspart4
+end_if
+set #a FindImage (0 0 1600 900 (C:\Users\Benetti\Downloads\talisman\MEGAIMAGES\ersatz.bmp) %arr workwindow)
+if_not #a > 0
+repeat 3
+send f6 800
+send f8 18000
+end_repeat
+end_if
+//indo parte 5
+set #a FindImage (0 0 1600 900 (C:\Users\Benetti\Downloads\talisman\MEGAIMAGES\mount.bmp) %arr workwindow)
+if_not #a > 0
+send space 1000
+end_if
+left 154, 478
+wait 2000
+left 148, 476
+wait 2000
+left 132, 468
+wait 2000
+left 291, 461
+wait 2000
+set #a FindImage (0 0 1600 900 (C:\Users\Benetti\Downloads\talisman\MEGAIMAGES\mount.bmp) %arr workwindow)
+if_not #a > 0
+send space 1000
+end_if
+:mobspart5
+wait 2000
+set #a FindImage (0 0 1600 900 (C:\Users\Benetti\Downloads\talisman\MEGAIMAGES\84.png) %arr workwindow)
+if #a > 0
+send f6 800
+send f1 1000
+send f2 1000
+send f3 1000
+send f2 1000
+send f3 1000
+send f2 1000
+send f6 800
+send f6 800
+send tab 800
+goto mobspart5
+end_if
+set #a FindImage (0 0 1600 900 (C:\Users\Benetti\Downloads\talisman\MEGAIMAGES\ersatz.bmp) %arr workwindow)
+if_not #a > 0
+repeat 2
+send f6 800
+send f8 18000
+end_repeat
+end_if
+//indo parte 6
+set #a FindImage (0 0 1600 900 (C:\Users\Benetti\Downloads\talisman\MEGAIMAGES\mount.bmp) %arr workwindow)
+if_not #a > 0
+send space 1000
+end_if
+left 161, 450
+wait 2000
+left 146, 520
+wait 2000
+left 165, 464
+wait 2000
+left 155, 269
+wait 2000
+left 123, 383
+wait 2000
+left 147, 473
+wait 2000
+left 127, 477
+WAIT 2000
+set #a FindImage (0 0 1600 900 (C:\Users\Benetti\Downloads\talisman\MEGAIMAGES\mount.bmp) %arr workwindow)
+if #a > 0
+send space 1000
+end_if
+send tab 800
+:mobspar65
+wait 2000
+set #a FindImage (0 0 1600 900 (C:\Users\Benetti\Downloads\talisman\MEGAIMAGES\84.png) %arr workwindow)
+if #a > 0
+send f6 800
+send f1 1000
+send f2 1000
+send f3 1000
+send f2 1000
+send f3 1000
+send f2 1000
+send f6 800
+send f6 800
+send tab 800
+goto mobspar65
+end_if
+set #a FindImage (0 0 1600 900 (C:\Users\Benetti\Downloads\talisman\MEGAIMAGES\ersatz.bmp) %arr workwindow)
+if_not #a > 0
+repeat 2
+send f6 800
+send f8 18000
+end_repeat
+end_if
+//saindo cave
+set #a FindImage (0 0 1600 900 (C:\Users\Benetti\Downloads\talisman\MEGAIMAGES\mount.bmp) %arr workwindow)
+if #a > 0
+send space 1000
+end_if
+left 272, 430
+wait 2000
+left 786, 112
+wait 2000
+left 792, 103
+wait 2000
+left 793, 96
+wait 2000
+left 796, 102
+wait 2000
+left 1042, 96
+wait 2000
+left 664, 73
+wait 2000
+left 749, 152
+wait 2000
+kright 675, 534
+WAIT 1500
+right 675, 534
+wait 2000
+left 360, 400
+wait 2000
+//vendendo itens
+kright 757, 763
+wait 2000
+right 757, 763
+wait 1500
+left 341, 445
+wait 1500
+repeat 10
+    left 523, 285
+    wait 1000
+    end_repeat
+    wait 1500
+    left 490, 714
+    wait 1500
+kright 1037, 359
+wait 2000
+right 1037, 359
+wait 1500
+left 360, 385
+wait 1500
+kright 524, 445
+wait 2000
+right 524, 445
+wait 1500
+left 373, 406
+wait 1500

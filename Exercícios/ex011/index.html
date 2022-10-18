@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em varios dispositivos ou simplesmente aumente e diminua o tamanho do seu navegador. </p>
+    <picture>
+        <source media="(max-width: 750px )" srcset="Imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="Imagens/foto-m.png" type="image/png">
+        <img src="Imagens/foto-g.png" alt="Imagem flexível"> <!--Base padrão, acima os soucers com tamanho menores, sempre acima-->
+    </picture>
+    <h1>Reproduzindo audio</h1>
+    <p>Vamos reproduzir o audio</p>
+    <audio preload="metadata"  controls loop > <!--o 'autoplay' a musica começa a tocar sozinha-->
+    <source src="midias/yesandno.mp3" type="audio/mpeg">
+    <source src="midias/yesandno.mp3" type="audio/ogg">
+    <source src="midias/yesandno.mp3" type="audio/wav">
+    <!--<audio src="midias/yesandno.mp3" controls autoplay></audio>   maneira limitada para navegadores-->    
+    </audio>
+<p>Infelizmente seu navegador nao consegue reproduzir o audio. <a href="midias/yesandno.mp3">Baixe o audio aqui</a></p>
+</body>
+</html>
